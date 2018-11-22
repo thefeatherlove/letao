@@ -11,7 +11,6 @@
   <link rel="stylesheet" href="lib/nprogress/nprogress.css">
   <link rel="stylesheet" href="./css/base.css">
   <link rel="stylesheet" href="./css/common.css">
-  <link rel="stylesheet" href="./css/index.css">
 </head>
 
 <body>
@@ -41,8 +40,8 @@
             <i class="glyphicon glyphicon-list"></i>
             <span>分类管理</span>
           </a>
-          <div class="child">
-            <a href="first.html">一级分类</a>
+          <div class="child" style="display: block">
+            <a href="first.html" class="current">一级分类</a>
             <a href="second.html">二级分类</a>
           </div>
         </li>
@@ -73,16 +72,9 @@
         <li>
           <a href="index.html">管理系统</a>
         </li>
-        <li class="active">首页</li>
+        <li class="active ">分类管理</li>
+        <li class="active ">一级分类</li>
       </ol>
-      <!-- 两个图表, 要求要是有宽高的容器 -->
-      <div class="lt_content">
-
-        <div class="echarts_left pull-left"></div>
-
-        <div class="echarts_right pull-right"></div>
-
-      </div>
     </div>
   </div>
   <!-- 模态框 -->
@@ -95,7 +87,7 @@
           </button>
           <h4 class="modal-title h4">温馨提示</h4>
         </div>
-        <div class="modal-body red">
+        <div class="modal-body">
           <p>
             <i class="glyphicon glyphicon-info-sign"></i>
             <span>您确定要退出后台管理系统吗？</span>
@@ -128,10 +120,9 @@
   <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
   <script src="./lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
   <script src="./lib/nprogress/nprogress.js"></script>
-  <script src="./lib/echarts/echarts.min.js"></script>
-  <script src="./js/isLogin.js"></script>
+  <script src="./lib/artTemplate/template-web.js"></script>
+  <script src="./lib/bootstrap-paginator/bootstrap-paginator.js"></script>
   <script src="./js/common.js"></script>
-  <script src="./js/index.js"></script>
 
 </body>
 

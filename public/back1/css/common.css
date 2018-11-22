@@ -1,0 +1,149 @@
+body {
+  background-color: #fff;
+}
+
+.table.table-bordered th,
+.table.table-bordered td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* 左侧侧边栏 */
+
+.lt_aside {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 180px;
+  height: 100%;
+  background-color: #222D32;
+  z-index: 999;
+  transition: left 1s;
+}
+
+.lt_aside.hidemenu {
+  left: -180px;
+}
+
+/* 标题 */
+
+.lt_aside .brand {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  background-color: #367fa9;
+}
+
+.lt_aside .brand a {
+  text-align: center;
+  font-size: 20px;
+  color: #fff;
+  display: block;
+}
+
+/* 用户头像 */
+
+.lt_aside .user {
+  height: 180px;
+  padding-top: 30px;
+}
+
+.lt_aside .user img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: block;
+}
+
+.lt_aside .user p {
+  height: 40px;
+  line-height: 40px;
+  font-size: 18px;
+  color: #fff;
+  text-align: center;
+}
+
+/* 导航 */
+
+.lt_aside .nav li a {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  color: #fff;
+  font-size: 14px;
+  padding-left: 40px;
+  border-left: 3px solid transparent;
+}
+
+.lt_aside .nav li a.current {
+  background-color: #1D1F21;
+  border-left: 3px solid #069;
+}
+
+.lt_aside .nav .child {
+  display: none;
+}
+
+.lt_aside .nav .child a {
+  padding-left: 60px;
+}
+
+/* 右侧顶部的按钮 */
+
+.lt_topbar {
+  height: 50px;
+  line-height: 50px;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding-left: 180px;
+  background-color: #3C8DBC;
+  z-index: 888;
+  transition: padding-left 1s;
+}
+
+.lt_topbar.hidemenu {
+  padding-left: 0;
+}
+
+.lt_topbar a {
+  width: 50px;
+  height: 50px;
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+}
+
+/* 右侧主体内容 */
+
+.lt_main {
+  width: 100%;
+  height: 1000px;
+  padding-left: 180px;
+  padding-top: 50px;
+  transition: padding-left 1s;
+}
+
+.lt_main.hidemenu {
+  padding-left: 0;
+}
+
+.lt_main ol {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.lt_main ol a {
+  color: #337ab7;
+}
+
+.lt_main a:hover,
+.lt_main a:focus {
+  color: #23527c;
+}
+
+.red {
+  color: #A94442;
+}
