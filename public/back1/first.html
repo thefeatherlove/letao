@@ -75,9 +75,25 @@
         <li class="active ">分类管理</li>
         <li class="active ">一级分类</li>
       </ol>
+      <!-- 添加分类按钮 -->
+      <button class="btn btn-default mb_20" id="addBtn">添加分类</button>
+      <table class="table table-bordered">
+        <thead>
+          <th width="20%">序号</th>
+          <th width="80%">一级分类名</th>
+        </thead>
+        <tbody>
+
+          <!-- 占个坑 -->
+        </tbody>
+      </table>
+      <!-- 分页插件的盒子 -->
+      <div class="text-right">
+        <ul id="pagintor"></ul>
+      </div>
     </div>
   </div>
-  <!-- 模态框 -->
+  <!-- 退出模态框 -->
   <div class="modal fade" id="myModal" tabindex="-1">
     <div class="modal-dialog modal-sm">
       <div class="modal-content">
@@ -102,27 +118,58 @@
     </div>
     <!-- /.modal-dialog -->
   </div>
-  <!-- /.modal -->
-
-  <!-- Small modal -->
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Small modal</button>
-
-  <div class="modal fade bs-example-modal-sm" tabindex="-1" aria-labelledby="mySmallModalLabel">
+  <!-- 添加分类模态框 -->
+  <div class="modal fade" id="firstaddModal" tabindex="-1">
     <div class="modal-dialog modal-sm">
       <div class="modal-content">
-        ...
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <h4 class="modal-title h4">添加分类</h4>
+        </div>
+        <div class="modal-body">
+          <form id="form">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="请输入一级分类" name="categoryName">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+          <button type="submit" class="btn btn-primary" form="form">添加</button>
+        </div>
       </div>
+      <!-- /.modal-content -->
     </div>
+    <!-- /.modal-dialog -->
   </div>
+  <!-- 模板引擎 -->
+  <script type="text/html" id="addTpl">
+    {{ each rows v i }}
+    <tr>
+      <td>{{ (page-1)*size + i +1 }}</td>
+      <td>{{ v.categoryName }}</td>
+    </tr>
+    {{ /each }}
+  </script>
+
 
 
   <script src="./lib/jquery/jquery.min.js"></script>
   <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+  <!-- 校验插件 -->
   <script src="./lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
+  <!-- 进度条 -->
   <script src="./lib/nprogress/nprogress.js"></script>
+  <!-- 模态框插件 -->
   <script src="./lib/artTemplate/template-web.js"></script>
+  <!-- 分页插件 -->
   <script src="./lib/bootstrap-paginator/bootstrap-paginator.js"></script>
+  <!-- 通用js -->
   <script src="./js/common.js"></script>
+  <script src="./js/first.js"></script>
+
 
 </body>
 

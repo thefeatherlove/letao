@@ -84,6 +84,9 @@ $(function() {
     $('#dropdownText').text( txt );
     // 设置隐藏域
     $('[name="brandId"]').val(id);
+
+     // 将隐藏域的校验状态改成VALID
+    $('#form').data("bootstrapValidator").updateStatus("brandId", "VALID");
   });
 
   // 4. 配置上传图片回调函数
